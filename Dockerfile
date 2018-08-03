@@ -19,10 +19,10 @@ ENV LANG C.UTF-8
 ENV LANGUAGE C.UTF-8
 ENV LC_ALL C.UTF-8
 
-RUN wget http://www.sno.phy.queensu.ca/~phil/exiftool/Image-ExifTool-10.20.tar.gz && \
-    gzip -dc Image-ExifTool-10.20.tar.gz  | tar -xf - && \
-    cd Image-ExifTool-10.20 && perl Makefile.PL && \
-    make install && cd ../ && rm -r Image-ExifTool-10.20
+RUN wget https://www.sno.phy.queensu.ca/~phil/exiftool/Image-ExifTool-11.08.tar.gz && \
+    gzip -dc Image-ExifTool-11.08.tar.gz  | tar -xf - && \
+    cd Image-ExifTool-11.08 && perl Makefile.PL && \
+    make install && cd ../ && rm -r Image-ExifTool-11.08
 
 COPY requirements.txt /opt/elodie/requirements.txt
 COPY docs/requirements.txt /opt/elodie/docs/requirements.txt
